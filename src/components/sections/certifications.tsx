@@ -5,15 +5,17 @@ import { Award, ExternalLink } from "lucide-react";
 
 const certificationsData = [
   {
-    title: "Full Stack Web Development",
+    title: "NxtWave Certified Full-Stack Developer",
     issuer: "NxtWave",
     year: "2025",
+    description: "Intensive program covering JavaScript, React, Node.js, and Web3 concepts, with hands-on projects demonstrating real-world application development.",
     link: "https://drive.google.com/drive/folders/1M89D4-WMH4hJzLIKNsUls9WcHXxAddCy?usp=sharing",
   },
   {
-    title: "Java Excellence",
-    issuer: "Coding Ninjas",
+    title: "NxtWave Java Developer Certification",
+    issuer: "NxtWave",
     year: "2024",
+    description: "Expertise in Core Java, OOP principles, Data Structures, and Algorithm implementation, validated by coding assignments and assessments.",
     link: "https://drive.google.com/drive/folders/1AVl92Ap_HX412aZ4U0VuiJFzM6rqEwW-?usp=sharing",
   },
 ];
@@ -26,7 +28,7 @@ export function CertificationsSection() {
           <Heading>Certifications</Heading>
           <Subheading>My professional credentials and qualifications.</Subheading>
         </div>
-        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {certificationsData.map((cert, index) => (
             <Card key={index} className="flex flex-col text-center items-center bg-background/50 backdrop-blur-sm border-primary/20">
               <CardHeader>
@@ -34,9 +36,10 @@ export function CertificationsSection() {
                    <Award className="h-8 w-8" />
                 </div>
                 <CardTitle className="font-headline text-xl">{cert.title}</CardTitle>
+                <p className="text-muted-foreground pt-2">{cert.issuer} &bull; {cert.year}</p>
               </CardHeader>
               <CardContent className="flex-grow">
-                <p className="text-muted-foreground">{cert.issuer} &bull; {cert.year}</p>
+                <p className="text-muted-foreground">{cert.description}</p>
               </CardContent>
               <CardFooter>
                 <Button asChild className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-105 transition-transform duration-300">
