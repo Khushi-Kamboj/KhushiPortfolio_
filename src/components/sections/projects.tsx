@@ -17,7 +17,7 @@ const projectsData = [
     title: "AI-Powered E-Commerce Website",
     status: "In Progress",
     description: "An intelligent shopping platform featuring voice navigation, Google OAuth for seamless sign-in, and integrated Razorpay/Stripe for secure checkout, all powered by an Express.js backend.",
-    techStack: ["React.js", "Express.js", "MongoDB", "Google OAuth", "Stripe", "Voice Navigation"],
+    techStack: ["React.js", "Express.js", "MongoDB", "Firebase Auth", "Google OAuth", "Stripe", "Razorpay", "Voice Navigation"],
     liveLink: null,
     githubLink: "https://github.com/Khushi-Kamboj/AI_powered_Ecommerce_website",
   },
@@ -133,7 +133,7 @@ export default function ProjectsSection() {
                     {project.title}
                   </CardTitle>
                    {project.status === 'In Progress' && (
-                    <Badge className="px-2 py-1 rounded text-xs bg-yellow-200 text-black">
+                    <Badge className="px-2 py-1 rounded-md text-xs bg-yellow-500 text-black shrink-0">
                         {project.status}
                     </Badge>
                   )}
