@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useTransition } from "react";
@@ -58,14 +59,19 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="py-20 md:py-32 bg-secondary">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 md:py-32 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_10%_20%,hsl(var(--primary)/0.1),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_90%_80%,hsl(var(--accent)/0.1),transparent)]" />
+      </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <Heading>My Projects</Heading>
           <Subheading>A selection of projects I've worked on.</Subheading>
         </div>
 
-        <Card className="mb-12 max-w-3xl mx-auto bg-background/50 border-primary/20 shadow-lg">
+        <Card className="mb-12 max-w-3xl mx-auto bg-background/50 backdrop-blur-sm border-primary/20 shadow-lg">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 font-headline text-primary">
               <Bot className="h-6 w-6" />
@@ -83,7 +89,7 @@ export default function ProjectsSection() {
                 value={interests}
                 onChange={(e) => setInterests(e.target.value)}
                 disabled={isPending}
-                className="flex-grow"
+                className="flex-grow bg-background/80"
               />
               <Button type="submit" disabled={isPending || !interests} className="w-full sm:w-auto">
                 {isPending ? (
@@ -117,7 +123,7 @@ export default function ProjectsSection() {
             <Card
               key={index}
               className={cn(
-                "flex flex-col h-full transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl",
+                "flex flex-col h-full transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl bg-background/50 backdrop-blur-sm border-primary/20",
                 recommended.includes(project.title) && "shadow-2xl shadow-primary/30 ring-2 ring-primary"
               )}
             >

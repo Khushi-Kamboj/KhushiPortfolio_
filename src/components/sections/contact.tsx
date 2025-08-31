@@ -78,7 +78,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="relative py-20 md:py-32 overflow-hidden">
        <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-secondary" />
+        <div className="absolute inset-0 bg-background" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_10%_20%,hsl(var(--primary)/0.1),transparent)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_90%_80%,hsl(var(--accent)/0.1),transparent)]" />
       </div>
