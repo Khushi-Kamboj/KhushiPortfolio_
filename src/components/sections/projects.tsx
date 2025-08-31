@@ -129,15 +129,15 @@ export default function ProjectsSection() {
             >
               <CardHeader>
                 <div className="flex justify-between items-start gap-4">
-                  <CardTitle className="font-headline text-xl flex items-center gap-2">
-                    {project.status === 'In Progress' && (
-                        <Badge className="bg-yellow-500 text-black whitespace-nowrap">
-                            {project.status}
-                        </Badge>
-                    )}
-                    <span>{project.title}</span>
+                  <CardTitle className="font-headline text-xl">
+                    {project.title}
                   </CardTitle>
-                   {project.status !== 'In Progress' && (
+                   {project.status === 'In Progress' && (
+                    <Badge className="px-2 py-1 rounded text-xs bg-yellow-200 text-black">
+                        {project.status}
+                    </Badge>
+                  )}
+                  {project.status !== 'In Progress' && (
                     <Badge variant={project.status === "Live" ? "default" : "secondary"} className={cn(project.status === "Live" && "bg-green-600 text-white")}>
                       {project.status}
                     </Badge>
