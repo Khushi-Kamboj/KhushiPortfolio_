@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-import { useFormState, useFormStatus } from "react-dom";
+import { useEffect, useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { Heading, Subheading } from "../ui/heading";
 import { Card, CardContent } from "../ui/card";
 import { Input } from "../ui/input";
@@ -37,7 +37,7 @@ function SubmitButton() {
 }
 
 export function ContactSection() {
-  const [state, formAction] = useFormState(submitContactForm, initialState);
+  const [state, formAction] = useActionState(submitContactForm, initialState);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export function ContactSection() {
         title: "Message Sent!",
         description: state.message,
       });
-    } else if (state.message && Object.keys(state.errors).length > 0) {
+    } else if (state.message && state.errors && Object.keys(state.errors).length > 0) {
         toast({
             title: "Error",
             description: state.message,
