@@ -10,7 +10,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
-import { Mail, Phone, Send, Loader2, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, Send, Loader2 } from "lucide-react";
 import { submitContactForm } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
 
@@ -51,18 +51,6 @@ const contactDetails = [
       value: "+91 9306605503",
       href: "tel:+919306605503",
     },
-    {
-        icon: Linkedin,
-        title: "LinkedIn",
-        value: "khushikamboj5",
-        href: "https://linkedin.com/in/khushikamboj5",
-    },
-    {
-        icon: Github,
-        title: "GitHub",
-        value: "Khushi-Kamboj",
-        href: "https://github.com/Khushi-Kamboj",
-    }
 ]
 
 export function ContactSection() {
@@ -103,7 +91,7 @@ export function ContactSection() {
           </Subheading>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+          <div className="lg:col-span-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {contactDetails.map((detail) => (
                 <Card key={detail.title} className="bg-background/50 backdrop-blur-sm border-primary/20 transition-all duration-300 hover:scale-105 hover:shadow-primary/20 hover:shadow-lg">
                     <CardContent className="pt-6 flex items-start gap-4">
