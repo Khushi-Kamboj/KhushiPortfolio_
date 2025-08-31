@@ -29,8 +29,8 @@ export function HeroSection() {
         <div className="animate-fade-in-up">
           <Image
             src="https://picsum.photos/192/192"
-            width={192}
-            height={192}
+            width={128}
+            height={128}
             alt="Khushi's Profile Picture"
             data-ai-hint="profile avatar"
             className="rounded-full border-4 border-primary/50 shadow-lg"
@@ -71,7 +71,7 @@ export function HeroSection() {
               </a>
             </Button>
             <Button size="lg" asChild className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-105 transition-transform duration-300">
-              <a href="#" download>
+              <a href="/Khushi_Resume.pdf" download="Khushi_Resume.pdf">
                 <Download />
                 Download Resume
               </a>
