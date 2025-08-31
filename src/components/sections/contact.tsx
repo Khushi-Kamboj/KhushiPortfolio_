@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useEffect, useActionState } from "react";
+import { useEffect, useRef, useActionState } from "react";
 import { useFormStatus } from "react-dom";
 import { Heading, Subheading } from "../ui/heading";
 import { Card, CardContent } from "../ui/card";
@@ -65,6 +65,7 @@ const contactDetails = [
 ]
 
 export function ContactSection() {
+  const formRef = useRef<HTMLFormElement>(null);
   const [state, formAction] = useActionState(submitContactForm, initialState);
   const { toast } = useToast();
 
@@ -74,7 +75,8 @@ export function ContactSection() {
         title: "Message Sent!",
         description: state.message,
       });
-    } else if (state.message && state.errors && Object.keys(state.errors).length > 0) {
+      formRef.current?.reset();
+    } else if (state.message && (state.errors && Object.keys(state.errors).length > 0 || !state.success)) {
         toast({
             title: "Error",
             description: state.message,
@@ -122,7 +124,7 @@ export function ContactSection() {
           <div className="lg:col-span-2">
             <Card className="bg-background/50 backdrop-blur-sm border-primary/20">
               <CardContent className="pt-6">
-                <form action={formAction} className="space-y-4">
+                <form ref={formRef} action={formAction} className="space-y-4">
                   <div>
                     <Label htmlFor="name">Name</Label>
                     <Input id="name" name="name" type="text" placeholder="Your Name" required className="bg-background/80" />

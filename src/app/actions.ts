@@ -1,7 +1,10 @@
+
 "use server";
 
 import { aiContentRecommendations } from "@/ai/flows/ai-content-recommendations";
 import { z } from "zod";
+import { db } from "@/lib/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export async function getRecommendations(
   projectDescriptions: string[],
@@ -36,16 +39,26 @@ export async function submitContactForm(prevState: any, formData: FormData) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
       message: "Please correct the errors and try again.",
+      success: false,
     };
   }
 
-  // In a real application, you would send an email here.
-  // For this example, we'll just log the data.
-  console.log("Contact form submitted:", validatedFields.data);
-
-  return {
-    message: "Thank you for your message! I'll get back to you soon.",
-    errors: {},
-    success: true,
-  };
+  try {
+    await addDoc(collection(db, "messages"), {
+      ...validatedFields.data,
+      createdAt: serverTimestamp(),
+    });
+    return {
+      message: "Thank you for your message! I'll get back to you soon.",
+      errors: {},
+      success: true,
+    };
+  } catch (error) {
+    console.error("Error writing to Firestore: ", error);
+    return {
+        message: "An error occurred while sending your message. Please try again.",
+        errors: {},
+        success: false,
+    };
+  }
 }
