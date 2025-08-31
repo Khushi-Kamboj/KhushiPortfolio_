@@ -90,8 +90,8 @@ export function ContactSection() {
             Have a question or want to work together? Feel free to reach out.
           </Subheading>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {contactDetails.map((detail) => (
                 <Card key={detail.title} className="bg-background/50 backdrop-blur-sm border-primary/20 transition-all duration-300 hover:scale-105 hover:shadow-primary/20 hover:shadow-lg">
                     <CardContent className="pt-6 flex items-start gap-4">
@@ -110,7 +110,7 @@ export function ContactSection() {
                 </Card>
             ))}
           </div>
-          <div className="lg:col-span-2">
+          <div>
             <Card className="bg-background/50 backdrop-blur-sm border-primary/20">
               <CardContent className="pt-6">
                 <form ref={formRef} action={formAction} className="space-y-4">
