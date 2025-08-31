@@ -84,12 +84,6 @@ export function AboutSection() {
           </Subheading>
         </div>
 
-        <div className="text-center max-w-3xl mx-auto mb-20">
-            <p className="text-lg text-muted-foreground">
-              I am an aspiring Software Engineer with a passion for full-stack development. I enjoy building scalable, user-friendly applications and I'm always eager to explore new technologies. My strong problem-solving skills drive me to find efficient and innovative solutions to complex challenges.
-            </p>
-        </div>
-
         <div className="mb-20">
           <h3 className="font-headline text-3xl font-bold text-center mb-10 text-primary">My Skillset</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
