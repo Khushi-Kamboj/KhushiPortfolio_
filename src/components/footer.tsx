@@ -1,3 +1,4 @@
+
 import { Github, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -6,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="bg-secondary">
-      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between py-8 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
         <p className="text-muted-foreground text-center sm:text-left mb-4 sm:mb-0">
           © {year} Khushi Kamboj. All rights reserved.
         </p>
