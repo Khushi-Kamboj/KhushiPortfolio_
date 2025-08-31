@@ -61,7 +61,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-20 md:py-32 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gray-900" />
+        <div className="absolute inset-0 bg-background" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_10%_20%,hsl(var(--primary)/0.1),transparent)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_90%_80%,hsl(var(--accent)/0.1),transparent)]" />
       </div>
