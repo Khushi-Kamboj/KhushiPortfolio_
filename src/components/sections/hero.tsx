@@ -28,9 +28,9 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center relative z-10">
         <div className="animate-fade-in-up">
           <Image
-            src="https://picsum.photos/256/256"
-            width={256}
-            height={256}
+            src="https://picsum.photos/192/192"
+            width={192}
+            height={192}
             alt="Khushi's Profile Picture"
             data-ai-hint="profile avatar"
             className="rounded-full border-4 border-primary/50 shadow-lg"
