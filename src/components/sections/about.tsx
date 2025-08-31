@@ -77,15 +77,8 @@ export function AboutSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <Heading>About Me</Heading>
-          <Subheading>
-            A brief introduction to my skills and accomplishments.
-          </Subheading>
-        </div>
-
         <div className="mb-20">
-          <h3 className="font-headline text-3xl font-bold text-center mb-10 text-primary">My Skillset</h3>
+          <h3 className="font-headline text-3xl font-bold text-center mb-10 text-primary">Skills</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {skills.map((skillCategory) => (
               <Card
