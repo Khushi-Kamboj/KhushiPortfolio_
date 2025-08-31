@@ -19,15 +19,15 @@ const projectsData = [
     description: "An intelligent shopping platform featuring voice navigation, Google OAuth for seamless sign-in, and integrated Razorpay/Stripe for secure checkout, all powered by an Express.js backend.",
     techStack: ["React.js", "Express.js", "MongoDB", "Google OAuth", "Stripe", "Voice Navigation"],
     liveLink: null,
-    githubLink: "#",
+    githubLink: "https://github.com/Khushi-Kamboj/AI_powered_Ecommerce_website",
   },
   {
     title: "Zo-moto – AI-Powered Food Ordering Platform",
     status: "Live",
     description: "A real-time food ordering application with an integrated chatbot for support. Features RESTful APIs, a MongoDB backend, and AI-powered interpretation of user queries.",
     techStack: ["React.js", "Node.js", "MongoDB", "REST APIs", "Chatbot", "AI"],
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://zomotobot.netlify.app/",
+    githubLink: "https://github.com/Khushi-Kamboj/Zomoto",
   },
   {
     title: "User Authentication using QR Code & OTP",
@@ -61,7 +61,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-20 md:py-32 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-background" />
+        <div className="absolute inset-0 bg-gray-900" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_10%_20%,hsl(var(--primary)/0.1),transparent)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_90%_80%,hsl(var(--accent)/0.1),transparent)]" />
       </div>
@@ -143,16 +143,16 @@ export default function ProjectsSection() {
               </CardContent>
               <CardFooter className="flex justify-end gap-2">
                 {project.liveLink && (
-                  <Button variant="outline" asChild>
+                  <Button variant="outline" asChild className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-105 transition-transform duration-300">
                     <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                       Live Demo <ExternalLink className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
                 )}
                 {project.githubLink && (
-                  <Button asChild>
+                  <Button asChild className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-105 transition-transform duration-300">
                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                      View Code
+                      GitHub Repo
                     </a>
                   </Button>
                 )}
