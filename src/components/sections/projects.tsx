@@ -130,8 +130,19 @@ export default function ProjectsSection() {
               <CardHeader>
                 <div className="flex justify-between items-start gap-4">
                   <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
-                  <Badge variant={project.status === "Live" ? "default" : "secondary"} className={cn(project.status === "Live" && "bg-green-600 text-white")}>{project.status}</Badge>
+                   {project.status !== 'In Progress' && (
+                    <Badge variant={project.status === "Live" ? "default" : "secondary"} className={cn(project.status === "Live" && "bg-green-600 text-white")}>
+                      {project.status}
+                    </Badge>
+                  )}
                 </div>
+                {project.status === 'In Progress' && (
+                  <div className="w-fit mx-auto mt-2 mb-3">
+                    <div className="px-3 py-1 rounded-full border border-gray-700/60 bg-gray-800/70 text-gray-300 text-xs font-medium tracking-wide uppercase">
+                      {project.status}
+                    </div>
+                  </div>
+                )}
                 <CardDescription className="pt-2">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
@@ -143,7 +154,7 @@ export default function ProjectsSection() {
               </CardContent>
               <CardFooter className="flex justify-end gap-2">
                 {project.liveLink && (
-                  <Button variant="outline" asChild className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-105 transition-transform duration-300">
+                  <Button variant="outline" asChild className="hover:scale-105 transition-transform duration-300">
                     <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                       Live Demo <ExternalLink className="ml-2 h-4 w-4" />
                     </a>
