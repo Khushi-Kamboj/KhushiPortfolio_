@@ -12,8 +12,8 @@ const certificationsData = [
     link: "https://drive.google.com/drive/folders/1M89D4-WMH4hJzLIKNsUls9WcHXxAddCy?usp=sharing",
   },
   {
-    title: "NxtWave Java Developer Certification",
-    issuer: "NxtWave",
+    title: "Java Excellence",
+    issuer: "Coding Ninjas",
     year: "2024",
     description: "Expertise in Core Java, OOP principles, Data Structures, and Algorithm implementation, validated by coding assignments and assessments.",
     link: "https://drive.google.com/drive/folders/1AVl92Ap_HX412aZ4U0VuiJFzM6rqEwW-?usp=sharing",
