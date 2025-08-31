@@ -95,12 +95,12 @@ export function ContactSection() {
             {contactDetails.map((detail) => (
                 <Card key={detail.title} className="bg-background/50 backdrop-blur-sm border-primary/20 transition-all duration-300 hover:scale-105 hover:shadow-primary/20 hover:shadow-lg">
                     <CardContent className="pt-6 flex items-start gap-4">
-                        <div className="bg-primary/10 text-primary p-3 rounded-full">
+                        <div className="bg-primary/10 text-primary p-3 rounded-full flex-shrink-0">
                         <detail.icon className="h-6 w-6" />
                         </div>
-                        <div>
+                        <div className="min-w-0">
                         <h3 className="text-lg font-semibold">{detail.title}</h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-muted-foreground break-words">
                             <a href={detail.href} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                             {detail.value}
                             </a>
