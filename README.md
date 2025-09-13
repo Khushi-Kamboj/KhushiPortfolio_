@@ -5,7 +5,7 @@
 
 ---
 
-### [✨ View the Live Demo ✨](https://your-live-demo-url.com)
+### [✨ View the Live Demo ✨](https://khushi-portfolio-beryl.vercel.app/)
 
 This repository contains the source code for my personal digital portfolio, a modern and interactive single-page application designed to showcase my skills, projects, and professional journey as an aspiring Software Engineer.
 
