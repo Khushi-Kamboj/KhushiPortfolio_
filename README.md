@@ -1,6 +1,6 @@
 # Khushi Kamboj - Digital Portfolio
 
-![Khushi's Digital Portfolio](https://picsum.photos/1200/600?grayscale)
+![Khushi's Digital Portfolio]()
 *<p align="center">A snapshot of the portfolio homepage.</p>*
 
 ---
