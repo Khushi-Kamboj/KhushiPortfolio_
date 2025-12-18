@@ -1,10 +1,5 @@
 # Khushi Kamboj - Digital Portfolio
 
-![Khushi's Digital Portfolio]()
-*<p align="center">A snapshot of the portfolio homepage.</p>*
-
----
-
 ### [✨ View the Live Demo ✨](https://khushi-portfolio-ghj22fy11-khushis-projects-78b8c231.vercel.app/)
 
 This repository contains the source code for my personal digital portfolio, a modern and interactive single-page application designed to showcase my skills, projects, and professional journey as an aspiring Software Engineer.
