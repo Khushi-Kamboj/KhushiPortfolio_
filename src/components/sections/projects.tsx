@@ -14,12 +14,12 @@ import { cn } from "@/lib/utils";
 
 const projectsData = [
   {
-    title: "AI-Powered E-Commerce Website",
-    status: "In Progress",
-    description: "An intelligent shopping platform featuring voice navigation, Google OAuth for seamless sign-in, and integrated Razorpay/Stripe for secure checkout, all powered by an Express.js backend.",
+    title: "StudyGenius– AI-Powered Revision Prep Tool",
+    status: "Live",
+    description: "Developed a full-stack web application using React, Firebase, Cloud Functions, and Gemini API, which allows users to upload notes, extract text using OCR, generate AI-based summaries, and track revisions through a smart calendar system.",
     techStack: ["React.js", "Express.js", "MongoDB", "Firebase Auth", "Google OAuth", "Stripe", "Razorpay", "Voice Navigation"],
-    liveLink: null,
-    githubLink: "https://github.com/Khushi-Kamboj/AI_powered_Ecommerce_website",
+    liveLink: "https://study-genius-ai-three.vercel.app/",
+    githubLink: "https://github.com/Khushi-Kamboj/StudyGeniusAI.git",
   },
   {
     title: "Zo-moto – AI-Powered Food Ordering Platform",
