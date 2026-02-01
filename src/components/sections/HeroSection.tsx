@@ -32,7 +32,7 @@ export function HeroSection() {
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 p-1">
             <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
               <img 
-                src="/Image_profile.png" 
+                src="/Image_profile.jpeg" 
                 alt={personalInfo.name} 
                 className="w-50 h-50 object-top object-contain"
               />
@@ -106,7 +106,7 @@ export function HeroSection() {
               </a>
             </Button>
            <a
-            href="/Khushi_resume.pdf"
+            href="/Khushi_resume__.pdf"
             download
             className="inline-flex items-center px-4 py-2 border border-primary/50 text-white rounded-lg hover:bg-primary/10 transition"
           >
